@@ -1,0 +1,47 @@
+{
+  "name": "image-multiupload",
+  "version": "1.0.0",
+  "description": "Multiple Image Upload with Axios",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "dev": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studioatual/image-multiupload.git"
+  },
+  "keywords": [
+    "image upload",
+    "multi upload",
+    "axios",
+    "drag n' drop"
+  ],
+  "author": "Studio Atual <contato@studioatual.com> (https://www.studioatual.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/studioatual/image-multiupload/issues"
+  },
+  "homepage": "https://github.com/studioatual/image-multiupload#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "js-sha1": "^0.6.0"
+  }
+}

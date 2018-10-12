@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+  <div id="selectUpload" class="select">
+    <div class="select-header">
+      <button id="btAdd" class="btn btn-darkgreen">ADICIONAR ARQUIVOS</button>
+      <button id="btAll" class="btn btn-darkblue">SELECIONAR TODOS</button>
+      <button id="btRemove" class="btn btn-darkred">REMOVER SELECIONADOS</button>
+    </div>
+    <div class="select-body">
+      <ul id="list" class="list"></ul>
+    </div>
+    <div id="displaybox" class="displaybox">
+      <span>ARRASTE SEUS ARQUIVOS AQUI</span>
+      <span>OU</span>
+      <span>CLIQUE NO BOTÃO ABAIXO</span>
+      <button id="btSelect" class="btn btn-dark btn-block btn-lg">SELECIONAR ARQUIVOS</button>
+    </div>
+  </div>
+</body>
+</html>

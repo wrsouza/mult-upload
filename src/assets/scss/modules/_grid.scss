@@ -1,0 +1,38 @@
+@mixin grid-clearfix() {
+    &:after {
+        display: table;
+        clear: both;
+        content: '';
+    }
+}
+
+@mixin grid-col($column, $columns, $padding) {
+    float: left;
+    width: percentage($column/$columns);
+    //height: 80px;
+    padding-right: $padding;
+    padding-left: $padding;
+}
+
+$grid-columns: 12;
+$grid-margin: 10px;
+
+.grid-container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 50px;
+}
+
+.row {
+    @include grid-clearfix();
+
+    margin-right: -$grid-margin;
+    margin-left: -$grid-margin;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+        @include grid-col($i, $grid-columns, $grid-margin);
+    }
+}

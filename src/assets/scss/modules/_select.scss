@@ -1,0 +1,146 @@
+.select {
+  position: relative;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+
+  &.openned {
+    .select-header {
+      top: 0;
+    }
+    .select-body {
+      top: 50px;
+    }
+    .list {
+      display: block;
+    }
+    .displaybox {
+      display: none;
+    }
+  }
+
+  &-header {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    transition: top 0.5s ease-in-out;
+
+    button {
+      margin: 0 3px;
+    }
+  }
+
+  &-body {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    overflow: scroll;
+    transition: top 0.5s ease-in-out
+  }
+
+  .list {
+    display: none;
+    height: 100%;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+    padding: 4px;
+    text-align: center;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: 25%;
+      margin: 0;
+      padding: 4px;
+      vertical-align: top;
+      cursor: pointer;
+
+
+      &.selected {
+        padding: 1px;
+
+        .container {
+          border: 3px solid rgba(0,100,120,0.5);
+        }
+      }
+
+      .container {
+        position: relative;
+        background: rgba(0,0,0,0.1);
+
+        &.show {
+          .progress {
+            display: none;
+          }
+
+          img {
+            display: block;
+          }
+        }
+
+        .progress {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+
+          &-bar {
+            position: relative;
+            width: 0%;
+            height: 100%;
+            background: rgba(0,0,0,0.1);
+            z-index: 0;
+          }
+
+          &-text {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            font-size: 40px;
+            text-align: center;
+            z-index: 1;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .displaybox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.1);
+    border: 1px solid rgba(0,0,0,0.2);
+
+    span {
+      display:block;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      color: #666666;
+      line-height: 22px;
+    }
+
+    button {
+      margin-top: 15px;
+    }
+  }
+}
+
