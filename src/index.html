@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
   <div id="selectUpload" class="select">
     <div class="select-header">
       <button id="btAdd" class="btn btn-darkgreen">ADICIONAR ARQUIVOS</button>
       <button id="btAll" class="btn btn-darkblue">SELECIONAR TODOS</button>
-      <button id="btRemove" class="btn btn-darkred">REMOVER SELECIONADOS</button>
+      <button id="btRemove" class="btn btn-darkred"><i class="fa fa-trash"></i></button>
+      <button id="btEnviar" class="btn btn-darkyellow"><i class="fa fa-upload"></i></button>
     </div>
     <div class="select-body">
-      <ul id="list" class="list"></ul>
+      <ul id="displayList" class="list"></ul>
     </div>
     <div id="displaybox" class="displaybox">
       <span>ARRASTE SEUS ARQUIVOS AQUI</span>

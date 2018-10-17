@@ -75,6 +75,16 @@
       }
     }
 
+    &-darkyellow {
+      color: #ffffff;
+      background: rgba(50, 24, 0, 0.5);
+      border: 1px solid rgba(50, 24, 0, 1);
+
+      &:hover {
+        background: rgba(100, 48, 0, 0.5);
+      }
+    }
+
     &-lg {
         padding: 10px 25px;
         font-size: 16px;
