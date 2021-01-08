@@ -2,6 +2,7 @@ require('./assets/scss/main.scss')
 import empty from './assets/img/empty.png'
 import axios from 'axios'
 const sha1 = require('js-sha1');
+const urlApi = 'http://image-upload.test/upload'
 
 let listFiles = []
 let width = 10.2 // (cm)
@@ -296,7 +297,7 @@ const send = async (idx) => {
       data.append('file', listFiles[idx].file)
 
   try {
-    let res = await axios.post('http://image-upload.test/upload', data, {
+    let res = await axios.post(urlApi, data, {
       headers: {
         'Content-Type': 'multipart/form-data'
       },
